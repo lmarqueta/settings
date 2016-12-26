@@ -55,3 +55,14 @@ augroup configgroup
 augroup END
 
 " Maps
+let mapleader=","
+
+fu! MdRemaps()
+    inoremap <leader>code ```<CR><CR>```<ESC>ka
+    inoremap <leader>img ![]()
+    inoremap <leader>href [](http://)<ESC>F[a
+    inoremap <leader>table \| \| <CR>--- \| --- \| ---<CR>\| \|<ESC>kki
+endfu
+
+autocmd FileType markdown call MdRemaps()
+
