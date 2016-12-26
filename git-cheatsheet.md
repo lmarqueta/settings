@@ -165,4 +165,68 @@ git add hola.txt
 
 ## Ver un commit anterior
 
+```
+$ git log --oneline
+d62cc7b continuando con git cheat sheet
+2435d0c hola de desarrollo
+e8804d7 added hola
+8f75994 Added Git cheat sheet
+8bd4737 Initial commit
+$ git checkout 8f75994
+Note: checking out '8f75994'.
+
+You are in 'detached HEAD' state. You can look around, make experimental
+changes and commit them, and you can discard any commits you make in this
+state without impacting any branches by performing another checkout.
+
+If you want to create a new branch to retain commits you create, you may
+do so (now or later) by using -b with the checkout command again. Example:
+
+  git checkout -b <new-branch-name>
+
+HEAD is now at 8f75994... Added Git cheat sheet
+```
+
+Tendremos el código como estaba en ese momento y podremos crear un branch,
+añadir una etiqueta (tag)...
+
+Se puede hacer checkout a un tag si el commit está etiquetado
+
+```
+git tag v1.0
+
+# Se puede tagear un coimmit antiguo con su código:
+git tag v0.9 2435d0c
+
+# Ver tags:
+git tag
+v1.0
+v0.9
+```
+
+## Repositorios remotos
+
+Cuando se clona, el repositorio original se añade automáticamente como remoto.
+Pero se pueden añadir más:
+
+```
+git remote add <nombre> ~/Repos/repo.git
+git remote add <nombre> https://github.com/nombre/repo
+
+# Ej.:
+git remote add origin ~/Owncloud/Projects/test.git
+
+# A partir de ahí se p
+git push <nombre_del_remoto> <branch>
+git push origin master
+```
+
+## Actualizar con pull/fetch
+
+Es conveniente hacer pulls de vez en cuando, sobre todo si en el proyecto
+trabajan distintas personas
+
+```
+git pull origin master
+```
 
