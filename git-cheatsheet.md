@@ -35,6 +35,14 @@ git status
 git commit -m "mensaje de commit"
 ```
 
+Un commit se puede rectificar:                                                     
+                                                                                   
+```                                                                                
+$ git commit -m 'initial commit'                                                   
+$ git add forgotten_file                                                           
+$ git commit --amend                                                               
+```                                                                                
+
 ## Eliminar archivos
 
 ```
@@ -51,8 +59,9 @@ Ojo, eliminar del **staging index**, no de un **commit**
 git add <fichero> # Añadido por error
 git reset HEAD <fichero>
 
-# Otra forma, recuperando la última versión
-git checkout -- <fichero>
+# Otra forma, recuperando la última versión                                     
+git checkout -- <fichero> # No recomendado, se pierden de forma irreversible    
+                          # los cambios en ese fichero. Mejor branch            
 ```
 
 ## Log
@@ -195,7 +204,7 @@ Se puede hacer checkout a un tag si el commit está etiquetado
 ```
 git tag v1.0
 
-# Se puede tagear un coimmit antiguo con su código:
+# Se puede tagear un commit antiguo con su código:
 git tag v0.9 2435d0c
 
 # Ver tags:
@@ -229,4 +238,8 @@ trabajan distintas personas
 ```
 git pull origin master
 ```
+
+## Referencias
+
+* [git documentation](https://git-scm.com/doc)
 
