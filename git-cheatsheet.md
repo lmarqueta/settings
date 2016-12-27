@@ -20,6 +20,9 @@ git init
 # Clonar uno existente
 git clone ~/Projects/repo.git # de otro directorio
 git clone https://github.com/twbs/bootstrap # de un servidor remoto
+
+# Clonar a otro directorio
+git clone https://github.com/twbs/bootstrap mybootstrap
 ```
 
 ## Staging index
@@ -35,13 +38,12 @@ git status
 git commit -m "mensaje de commit"
 ```
 
-Un commit se puede rectificar:                                                     
-                                                                                   
-```                                                                                
-$ git commit -m 'initial commit'                                                   
-$ git add forgotten_file                                                           
-$ git commit --amend                                                               
-```                                                                                
+Un commit se puede rectificar:
+```
+$ git commit -m 'initial commit'
+$ git add forgotten_file
+$ git commit --amend
+```
 
 ## Eliminar archivos
 
@@ -93,7 +95,7 @@ git branch -d desarrollo
 
 ## Merge
 
-Combinar los cambios de distintas ramas. Se suele hacer 
+Combinar los cambios de distintas ramas. Se suele hacer
 
 ```
 $ git branch
@@ -160,7 +162,7 @@ Changes not staged for commit:
 no changes added to commit (use "git add" and/or "git commit -a")
 
 # Git añadirá unas marcas en el conflicto:
-$ cat hola.txt 
+$ cat hola.txt
 <<<<<<< HEAD
 hola
 adiós
@@ -241,5 +243,4 @@ git pull origin master
 
 ## Referencias
 
-* [git documentation](https://git-scm.com/doc)
-
+* [Git documentation](https://git-scm.com/doc)

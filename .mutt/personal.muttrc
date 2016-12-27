@@ -1,0 +1,21 @@
+# Account specific
+set folder=imaps://mail.example.com:993/
+set smtp_url=smtp://username@example.com@smtp.example.com:587/
+set imap_user=username@example.com
+set imap_pass='********'
+set smtp_pass='********'
+set ssl_starttls=yes
+set ssl_force_tls=yes
+set spoolfile=+Inbox
+set from="Real Name <username@example.com>"
+set record=+Sent
+set postponed=+Drafts
+set signature="~/.mutt/username.sig"
+
+set strict_threads=yes
+set folder_format="%2C %t %N %8s %d %f"
+set auto_tag = yes
+set sort_aux=reverse-date-received       
+set sort=threads
+set sort_re
+

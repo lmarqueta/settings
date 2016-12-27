@@ -1,0 +1,83 @@
+# Identity
+set realname = "<real name>"
+
+# Common
+set move = no
+set copy = yes
+set quit = ask-no
+set date_format = '!%Y-%m-%d %H:%M:%S %a'
+set beep = no
+set beep_new = yes
+set user_agent = yes
+set noconfirmappend
+set pager_index_lines = 12
+set certificate_file=~/.mutt/certificates
+set strict_threads=yes
+set folder_format="%2C %t %N %8s %d %f"
+set auto_tag = yes
+set sort_aux=reverse-date-received       
+set sort=threads
+set sort_re
+
+# Aliases
+set alias_file=~/.mutt/aliases
+set sort_alias= alias
+set reverse_alias=yes
+source $alias_file
+
+# Query command
+# This section could be account specific as well
+#   i.e. an adquery script for corporate LDAP queries
+#   and a goobook for personal account
+# set query_command="~/.mutt/adquery.pl %s"
+# bind editor <tab> complete-query
+# bind editor <down> complete
+
+# Refresh
+set timeout=61
+set mail_check=60
+# bind index <F5> sync-mailbox
+
+# Cache
+set header_cache =~/.mutt/cache/headers
+set message_cachedir =~/.mutt/cache/bodies
+
+# Forward attachments
+set forward_quote=yes
+set mime_forward=yes
+set mime_forward_rest=yes
+set forward_format="Fwd: %s"
+
+# Editor
+set editor=vim
+
+# Headers
+ignore      *
+unignore    From: Subject Date To Cc Bcc User-Agent Reply-To
+unignore    Newsgroups Followup-To X-Newsreader X-Source-Folder
+unignore    X-Spam-Status X-Spam-Report X-Mailer X-Virus-Report X-Web
+unhdr_order *
+hdr_order   From Reply-To Subject Date To Cc Bcc X-Source-Folder \
+    News Follow X-Mailer X-Newsreader User-Agent X-Item-Modified Message X-
+
+# Color
+# Colors for items in the reader
+# set arrow_cursor
+# color indicator brightwhite    white
+# color header brightwhite  black "^From:"
+# color header brightyellow  black "^Subject:"
+# color header brightcyan   black ^To:
+# color header brightcyan   black ^Cc:
+# mono  header bold               "^(From|Subject):"
+# color index  brightred    default    "importance: high"
+# color index  brightgreen  black  ~N
+# color tree   cyan  black
+
+set mailcap_path=~/.mutt/mailcap
+auto_view text/html
+
+# GPG
+# set pgp_sign_as=<PGPID>
+# set pgp_autosign=yes
+# set pgp_timeout=1800
+
