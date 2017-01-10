@@ -8,7 +8,6 @@ set hlsearch
 set number
 set showcmd
 set showmode
-set cursorline
 " set incsearch
 set showmatch
 set noerrorbells
@@ -17,9 +16,12 @@ set visualbell
 " Color
 syntax on
 set background=dark
-colorscheme Tomorrow-Night-Eighties
+if !empty(glob("~/.vim/colors/Tomorrow-Night-Eighties.vim"))
+    colorscheme Tomorrow-Night-Eighties
+    set colorcolumn=80
+endif
 set encoding=utf-8
-set colorcolumn=80
+" set cursorline
 
 " Tabs
 set autoindent
